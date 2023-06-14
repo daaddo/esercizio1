@@ -10,7 +10,13 @@ import org.jinjection.ann.ExerciseType;
  *
  * @author Luca Coraci
  */
-@Exercise(name = "F.0-MONSTER", type = ExerciseType.FREE, testEnabled = false)
+@Exercise(name = "F.0-MONSTER", type = ExerciseType.FREE, testEnabled = true)
 public class Monster {
+    private int brutality =3;
+    public String nome;
+
+    public int roar(int x){
+        return x*brutality;
+    }
 
 }

@@ -20,6 +20,32 @@ import org.jinjection.ann.ExerciseType;
  */
 @Exercise(name = "F.1-TABLE", type = ExerciseType.FREE, testEnabled = false)
 public class Table {
+    private String name;
+    private int width;
+    private int height;
 
+    public Table(){
+
+    }
+    public Table(String name, int width, int height){
+        this.name = name;
+        this.height = height;
+        this.width = width;
+    }
+    public Table(int width, int height){
+        this.width = width;
+        this.height = height;
+    }
+    public int area(int width, int height){
+        return width*height;
+    }
+    public void changeName(String name){
+        if(name.isBlank()||name.isEmpty()){
+            this.name = "INVALID";
+        }
+        else{
+            this.name = name;
+        }
+    }
 }
 
